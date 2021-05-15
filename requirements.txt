@@ -1,0 +1,2 @@
+httpx==0.18.1
+ratelimit==2.2.1
