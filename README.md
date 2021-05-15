@@ -4,7 +4,7 @@ This script uses the [Save Page Now 2 Public API](https://docs.google.com/docume
 
 To use it:
 
-1. Clone or download and unzip this repository.
+1. Clone or [download](https://github.com/rybesh/capture-urls/archive/refs/heads/main.zip "download repository as a zip file") and unzip this repository.
 
 1. Install the required Python libraries. Assuming you cloned or
    unzipped this repository to the directory `path/to/capture-urls/`:
