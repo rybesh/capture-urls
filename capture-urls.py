@@ -142,9 +142,9 @@ def get_timestamp_age(timestamp) -> Union[int, None]:
 
 def process_input_url(client, url, progress: Progress):
     if (
-            url in progress.pending_urls or
-            url in progress.failed_urls or
-            url in progress.captured_urls
+            url in progress.pending_urls
+            or url in progress.failed_urls
+            or url in progress.captured_urls
     ):
         return
 
