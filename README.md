@@ -1,5 +1,7 @@
 # Archive a list of URLs using the Wayback Machine
 
+** You need Python 3.10 or later to run this script. **
+
 This script uses the [Save Page Now 2 Public API](https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/edit).
 
 To use it:
