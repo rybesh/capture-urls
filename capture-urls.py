@@ -108,7 +108,7 @@ def check_status(client, job_ids: list) -> list:
 def get_last_capture_url(client, url) -> Union[str, None]:
     redirect_url = f'https://web.archive.org/web/2/{url}'
     try:
-        r = client.get(redirect_url, allow_redirects=False)
+        r = client.get(redirect_url)
         if r.status_code == 302:
             return r.headers.get('location', '')
         else:
