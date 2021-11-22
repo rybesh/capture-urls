@@ -1,14 +1,20 @@
-#! ./venv/bin/python3
+#! ./venv/bin/python3.10
+
+import sys
+
+if sys.version_info.major < 3 or sys.version_info.minor < 10:
+    sys.exit("You need Python 3.10 or later to run this script.")
+
 
 import httpx
 import json
 import os
 import re
-import sys
 from datetime import datetime
 from enum import Enum
 from ratelimit import limits, sleep_and_retry
 from typing import Union, NamedTuple
+
 
 from secret import ACCESS_KEY, SECRET_KEY
 from config import MAX_CAPTURE_AGE, PERIOD, TIMEOUT, DEFAULT_PARAMS
@@ -275,6 +281,4 @@ def main():
 PROGRESS_FILENAME = "progress.json"
 
 if __name__ == "__main__":
-    if sys.version_info.major < 3 or sys.version_info.minor < 10:
-        sys.exit("You need Python 3.10 or later to run this script.")
     main()
