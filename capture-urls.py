@@ -40,7 +40,10 @@ def log(x):
 
 def log_error(result: dict):
     if "status_ext" in result:
-        log(" - " + ERROR_MESSAGES[result["status_ext"]])
+        message = ERROR_MESSAGES.get(
+            result["status_ext"], ERROR_MESSAGES["error:unknown"]
+        )
+        log(" - " + message)
     if "message" in result:
         log(" - " + result["message"])
 
