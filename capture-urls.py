@@ -192,6 +192,10 @@ def process_result(result: dict, progress: Progress):
         return
 
     url = progress.capture_requests[job_id]["url"]
+    if url not in progress.pending_urls:
+        log("already-processed job ID in results; ignoring")
+        return
+
     log(url)
     log(f" - job id: {job_id}")
 
