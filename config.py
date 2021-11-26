@@ -1,3 +1,7 @@
+# user agent string - don't change this unless you really need to, as
+# it helps the Internet Archive track the usage of this script.
+USER_AGENT = "rybesh/capture-urls/0.0.1"
+
 # request new capture if most recent capture is more than this many days old
 MAX_CAPTURE_AGE = 30
 

@@ -17,7 +17,7 @@ from typing import Union, NamedTuple
 
 
 from secret import ACCESS_KEY, SECRET_KEY
-from config import MAX_CAPTURE_AGE, PERIOD, TIMEOUT, DEFAULT_PARAMS
+from config import MAX_CAPTURE_AGE, PERIOD, TIMEOUT, DEFAULT_PARAMS, USER_AGENT
 from errors import ERROR_MESSAGES
 
 
@@ -221,7 +221,7 @@ def process_result(result: dict, progress: Progress):
 
 
 def capture_urls(progress: Progress):
-    with httpx.Client(timeout=TIMEOUT) as client:
+    with httpx.Client(headers={"user-agent": USER_AGENT}, timeout=TIMEOUT) as client:
         for url in map(str.rstrip, sys.stdin):
             process_input_url(client, url, progress)
 
