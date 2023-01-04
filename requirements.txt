@@ -1,2 +1,2 @@
-httpx==0.23.2
+httpx==0.23.3
 ratelimit==2.2.1
